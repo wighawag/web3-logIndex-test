@@ -1,0 +1,10 @@
+{
+  "scripts": {
+    "truffle": "truffle",
+    "test": "truffle test"
+  },
+  "dependencies": {
+    "truffle": "^4.1.11",
+    "web3": "^1.0.0-beta.34"
+  }
+}
