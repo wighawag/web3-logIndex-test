@@ -1,0 +1,857 @@
+{
+  "contractName": "Test",
+  "abi": [
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "name": "from",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "name": "active",
+          "type": "bool"
+        }
+      ],
+      "name": "Event1",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "name": "from",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "name": "value",
+          "type": "int256"
+        }
+      ],
+      "name": "Event2",
+      "type": "event"
+    },
+    {
+      "constant": false,
+      "inputs": [],
+      "name": "testEvents",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "bytecode": "0x6080604052348015600f57600080fd5b506101678061001f6000396000f300608060405260043610610041576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff1680630e5356ec14610046575b600080fd5b34801561005257600080fd5b5061005b61005d565b005b7f25db18fdac10fa20517dbdf1b61fa56940111a6de3b03c7f4ca204fc2f0ad356336001604051808373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff168152602001821515151581526020019250505060405180910390a17f8c274d7c08aed08867bfb2dd79467ef65d24737515bd587ea658bdde878c5dc2336003604051808373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020018281526020019250505060405180910390a15600a165627a7a7230582054b34d8bc14408fc5564b566192ee683878b747b7e35908a4cf45568580239890029",
+  "deployedBytecode": "0x608060405260043610610041576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff1680630e5356ec14610046575b600080fd5b34801561005257600080fd5b5061005b61005d565b005b7f25db18fdac10fa20517dbdf1b61fa56940111a6de3b03c7f4ca204fc2f0ad356336001604051808373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff168152602001821515151581526020019250505060405180910390a17f8c274d7c08aed08867bfb2dd79467ef65d24737515bd587ea658bdde878c5dc2336003604051808373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020018281526020019250505060405180910390a15600a165627a7a7230582054b34d8bc14408fc5564b566192ee683878b747b7e35908a4cf45568580239890029",
+  "sourceMap": "25:227:1:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;25:227:1;;;;;;;",
+  "deployedSourceMap": "25:227:1:-;;;;;;;;;;;;;;;;;;;;;;;;139:111;;8:9:-1;5:2;;;30:1;27;20:12;5:2;139:111:1;;;;;;;183:24;190:10;202:4;183:24;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;222:21;229:10;241:1;222:21;;;;;;;;;;;;;;;;;;;;;;;;;;;;139:111::o",
+  "source": "pragma solidity ^0.4.23;\ncontract Test {\n\n    event Event1(address from, bool active);\n    event Event2(address from, int value);\n    \n    function testEvents() public {\n        emit Event1(msg.sender, true);\n        emit Event2(msg.sender, 3);\n    }\n}",
+  "sourcePath": "/home/wighawag/dev/validitylabs/truffle-test/contracts/Test.sol",
+  "ast": {
+    "absolutePath": "/home/wighawag/dev/validitylabs/truffle-test/contracts/Test.sol",
+    "exportedSymbols": {
+      "Test": [
+        87
+      ]
+    },
+    "id": 88,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 58,
+        "literals": [
+          "solidity",
+          "^",
+          "0.4",
+          ".23"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:24:1"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 87,
+        "linearizedBaseContracts": [
+          87
+        ],
+        "name": "Test",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "anonymous": false,
+            "documentation": null,
+            "id": 64,
+            "name": "Event1",
+            "nodeType": "EventDefinition",
+            "parameters": {
+              "id": 63,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 60,
+                  "indexed": false,
+                  "name": "from",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 64,
+                  "src": "59:12:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 59,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "59:7:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 62,
+                  "indexed": false,
+                  "name": "active",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 64,
+                  "src": "73:11:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 61,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "73:4:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "58:27:1"
+            },
+            "src": "46:40:1"
+          },
+          {
+            "anonymous": false,
+            "documentation": null,
+            "id": 70,
+            "name": "Event2",
+            "nodeType": "EventDefinition",
+            "parameters": {
+              "id": 69,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 66,
+                  "indexed": false,
+                  "name": "from",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 70,
+                  "src": "104:12:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 65,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "104:7:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 68,
+                  "indexed": false,
+                  "name": "value",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 70,
+                  "src": "118:9:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_int256",
+                    "typeString": "int256"
+                  },
+                  "typeName": {
+                    "id": 67,
+                    "name": "int",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "118:3:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_int256",
+                      "typeString": "int256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "103:25:1"
+            },
+            "src": "91:38:1"
+          },
+          {
+            "body": {
+              "id": 85,
+              "nodeType": "Block",
+              "src": "168:82:1",
+              "statements": [
+                {
+                  "eventCall": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "expression": {
+                          "argumentTypes": null,
+                          "id": 74,
+                          "name": "msg",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 102,
+                          "src": "190:3:1",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_magic_message",
+                            "typeString": "msg"
+                          }
+                        },
+                        "id": 75,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberName": "sender",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": null,
+                        "src": "190:10:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "hexValue": "74727565",
+                        "id": 76,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "bool",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "202:4:1",
+                        "subdenomination": null,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        },
+                        "value": "true"
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        },
+                        {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      ],
+                      "id": 73,
+                      "name": "Event1",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 64,
+                      "src": "183:6:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_event_nonpayable$_t_address_$_t_bool_$returns$__$",
+                        "typeString": "function (address,bool)"
+                      }
+                    },
+                    "id": 77,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "183:24:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 78,
+                  "nodeType": "EmitStatement",
+                  "src": "178:29:1"
+                },
+                {
+                  "eventCall": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "expression": {
+                          "argumentTypes": null,
+                          "id": 80,
+                          "name": "msg",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 102,
+                          "src": "229:3:1",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_magic_message",
+                            "typeString": "msg"
+                          }
+                        },
+                        "id": 81,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberName": "sender",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": null,
+                        "src": "229:10:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "hexValue": "33",
+                        "id": 82,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "number",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "241:1:1",
+                        "subdenomination": null,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_rational_3_by_1",
+                          "typeString": "int_const 3"
+                        },
+                        "value": "3"
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        },
+                        {
+                          "typeIdentifier": "t_rational_3_by_1",
+                          "typeString": "int_const 3"
+                        }
+                      ],
+                      "id": 79,
+                      "name": "Event2",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 70,
+                      "src": "222:6:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_event_nonpayable$_t_address_$_t_int256_$returns$__$",
+                        "typeString": "function (address,int256)"
+                      }
+                    },
+                    "id": 83,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "222:21:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 84,
+                  "nodeType": "EmitStatement",
+                  "src": "217:26:1"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 86,
+            "implemented": true,
+            "isConstructor": false,
+            "isDeclaredConst": false,
+            "modifiers": [],
+            "name": "testEvents",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 71,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "158:2:1"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 72,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "168:0:1"
+            },
+            "scope": 87,
+            "src": "139:111:1",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 88,
+        "src": "25:227:1"
+      }
+    ],
+    "src": "0:252:1"
+  },
+  "legacyAST": {
+    "absolutePath": "/home/wighawag/dev/validitylabs/truffle-test/contracts/Test.sol",
+    "exportedSymbols": {
+      "Test": [
+        87
+      ]
+    },
+    "id": 88,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 58,
+        "literals": [
+          "solidity",
+          "^",
+          "0.4",
+          ".23"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:24:1"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 87,
+        "linearizedBaseContracts": [
+          87
+        ],
+        "name": "Test",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "anonymous": false,
+            "documentation": null,
+            "id": 64,
+            "name": "Event1",
+            "nodeType": "EventDefinition",
+            "parameters": {
+              "id": 63,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 60,
+                  "indexed": false,
+                  "name": "from",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 64,
+                  "src": "59:12:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 59,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "59:7:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 62,
+                  "indexed": false,
+                  "name": "active",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 64,
+                  "src": "73:11:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 61,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "73:4:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "58:27:1"
+            },
+            "src": "46:40:1"
+          },
+          {
+            "anonymous": false,
+            "documentation": null,
+            "id": 70,
+            "name": "Event2",
+            "nodeType": "EventDefinition",
+            "parameters": {
+              "id": 69,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 66,
+                  "indexed": false,
+                  "name": "from",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 70,
+                  "src": "104:12:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 65,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "104:7:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 68,
+                  "indexed": false,
+                  "name": "value",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 70,
+                  "src": "118:9:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_int256",
+                    "typeString": "int256"
+                  },
+                  "typeName": {
+                    "id": 67,
+                    "name": "int",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "118:3:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_int256",
+                      "typeString": "int256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "103:25:1"
+            },
+            "src": "91:38:1"
+          },
+          {
+            "body": {
+              "id": 85,
+              "nodeType": "Block",
+              "src": "168:82:1",
+              "statements": [
+                {
+                  "eventCall": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "expression": {
+                          "argumentTypes": null,
+                          "id": 74,
+                          "name": "msg",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 102,
+                          "src": "190:3:1",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_magic_message",
+                            "typeString": "msg"
+                          }
+                        },
+                        "id": 75,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberName": "sender",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": null,
+                        "src": "190:10:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "hexValue": "74727565",
+                        "id": 76,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "bool",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "202:4:1",
+                        "subdenomination": null,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        },
+                        "value": "true"
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        },
+                        {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      ],
+                      "id": 73,
+                      "name": "Event1",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 64,
+                      "src": "183:6:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_event_nonpayable$_t_address_$_t_bool_$returns$__$",
+                        "typeString": "function (address,bool)"
+                      }
+                    },
+                    "id": 77,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "183:24:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 78,
+                  "nodeType": "EmitStatement",
+                  "src": "178:29:1"
+                },
+                {
+                  "eventCall": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "expression": {
+                          "argumentTypes": null,
+                          "id": 80,
+                          "name": "msg",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 102,
+                          "src": "229:3:1",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_magic_message",
+                            "typeString": "msg"
+                          }
+                        },
+                        "id": 81,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberName": "sender",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": null,
+                        "src": "229:10:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "hexValue": "33",
+                        "id": 82,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "number",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "241:1:1",
+                        "subdenomination": null,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_rational_3_by_1",
+                          "typeString": "int_const 3"
+                        },
+                        "value": "3"
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        },
+                        {
+                          "typeIdentifier": "t_rational_3_by_1",
+                          "typeString": "int_const 3"
+                        }
+                      ],
+                      "id": 79,
+                      "name": "Event2",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 70,
+                      "src": "222:6:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_event_nonpayable$_t_address_$_t_int256_$returns$__$",
+                        "typeString": "function (address,int256)"
+                      }
+                    },
+                    "id": 83,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "222:21:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 84,
+                  "nodeType": "EmitStatement",
+                  "src": "217:26:1"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 86,
+            "implemented": true,
+            "isConstructor": false,
+            "isDeclaredConst": false,
+            "modifiers": [],
+            "name": "testEvents",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 71,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "158:2:1"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 72,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "168:0:1"
+            },
+            "scope": 87,
+            "src": "139:111:1",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 88,
+        "src": "25:227:1"
+      }
+    ],
+    "src": "0:252:1"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.4.24+commit.e67f0147.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "2.0.0",
+  "updatedAt": "2018-05-25T10:59:46.017Z"
+}

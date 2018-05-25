@@ -5,3 +5,9 @@ test for logIndex behaviour
 
 
 ```yarn test```
+
+
+to see the correct execution on rinkeby with an infura node :
+
+node rinkeby.js
+

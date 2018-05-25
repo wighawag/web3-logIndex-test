@@ -4,6 +4,7 @@
     "test": "truffle test"
   },
   "dependencies": {
+    "chai": "^4.1.2",
     "truffle": "^4.1.11",
     "web3": "^1.0.0-beta.34"
   }

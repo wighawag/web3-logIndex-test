@@ -10,7 +10,7 @@ const Test = new web3.eth.Contract(TestContractInfo.abi, {data: TestContractInfo
 
 contract('Test', function(accounts) {
 
-  it("should result in 4 events whose logIndex represent the position in the transaction (and not as web3/json rpc doc states, the position in the block)", function() {
+  it("should result in 4 events whose logIndex represent the position in the block (as the web3/json rpc doc states)", function() {
     return Test.deploy().send({from:accounts[0], gas: 400000})
         .then(function(test) {
             return stopAutoMine()
@@ -26,10 +26,10 @@ contract('Test', function(accounts) {
             assert.equal(result[1].logIndex, 1);
             assert.equal(result[1].transactionIndex, 0);
 
-            assert.equal(result[2].logIndex, 0);
+            assert.equal(result[2].logIndex, 2);
             assert.equal(result[2].transactionIndex, 1);
 
-            assert.equal(result[3].logIndex, 1);
+            assert.equal(result[3].logIndex, 3);
             assert.equal(result[3].transactionIndex, 1);
         });
   });
