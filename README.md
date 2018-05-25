@@ -2,4 +2,6 @@
 test for logIndex behaviour
 
 ```yarn```
+
+
 ```yarn test```
