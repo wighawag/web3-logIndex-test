@@ -20,7 +20,6 @@ contract('Test', function(accounts) {
                 .then(() => test.getPastEvents("allEvents"));
         })
         .then(function(result) {
-            console.log(result);
             assert.equal(result[0].logIndex, 0);
             assert.equal(result[0].transactionIndex, 0);
 
@@ -39,13 +38,13 @@ contract('Test', function(accounts) {
 
 function testEvents(testContract, from) {
     return new Promise((resolve, reject) => {
+        console.log('testEvents transaction...');
         var promiEvent = testContract.methods.testEvents().send({from, gas:40000});
         promiEvent.catch((error) => {
             reject(error);
         });
 
         promiEvent.once('transactionHash', (txHash) => {
-            console.log(txHash);
             resolve(txHash);
         });
     });
